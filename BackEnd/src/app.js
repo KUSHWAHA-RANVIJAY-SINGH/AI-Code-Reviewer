@@ -12,6 +12,9 @@ app.use(express.json())
 app.get('/', (req, res) => {
     res.send('Hello World')
 })
+app.get("/hello", (req, res) => {
+    res.json({ message: "Hello from Vercel backend!" });
+});
 
 app.use('/ai', aiRoutes)
 
